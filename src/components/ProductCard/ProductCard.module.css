@@ -1,0 +1,45 @@
+.ProductCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #e0e0e086;
+    border-radius: 5px;
+    margin: 10px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ProductCard_header img { 
+    width: 350px;  
+    height: auto; 
+    border-radius: 10px; 
+}
+
+.ProductCard_body h2 { 
+    color: #801e0d; 
+}
+
+.ProductCard_body .price { 
+    font-size: 22px; 
+    font-weight: bold; 
+    color: #5b0d0da1; 
+}
+
+.ProductCard_button { 
+    background-color: #ffffff; 
+    color: rgb(142, 18, 18); padding: 15px 32px;
+    font-size: 20px;
+    font-style: bold; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none; 
+    border-radius: 50px;  
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.267);  
+} 
+.ProductCard_button:hover { 
+    background-color: #dbae545b;  
+}
+
+
