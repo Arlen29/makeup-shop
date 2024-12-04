@@ -79,3 +79,55 @@
     width: 40%;
     max-width: 30%;
 }
+
+.openModalButton {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    background-color: #7e0c0ca8;
+    border: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.openModalButton:hover {
+    background-color: #f4bd9aef;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.817);
+    padding: 20px;
+    border-radius: 8px;
+    outline: none;
+    width: 80%;
+    max-width: 600px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.closeModalButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #a35a66;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.closeModalButton:hover {
+    background-color: #c82333;
+}
+
