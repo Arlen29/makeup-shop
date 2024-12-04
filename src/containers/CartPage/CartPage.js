@@ -1,27 +1,26 @@
 import { products } from '../../utils/products';
+import Navbar from '../../components/navbar/Navbar';
 import css from './CartPage.module.css';
 
 const CartPage = () => {
-
     const cart = JSON.parse(localStorage.getItem("cart-makeup")) || [];
 
-    console.log("cart", cart); 
-
-    
+    console.log("cart", cart);
 
     return (
         <div className={css.CartPage}>
+            <Navbar />
             <h1>Cart Page</h1>
 
             <div className={css.CartPage_list}>
                 {cart.length > 0 ? cart.map((item, index) => {
-                    const product = products.find(product => product.id === item.id)
+                    const product = products.find(product => product.id === item.id);
 
                     if (product) {
                         return (
                             <div key={index} className={css.CartPage_item}>
                                 <div className={css.CartPage_item_header}>
-                                    <img src={product.image} alt="Product" className={css.CartPage_item_image} /> 
+                                    <img src={product.image} alt="Product" className={css.CartPage_item_image} />
                                 </div>
                                 <div className={css.CartPage_item_body}>
                                     <h2>{product.name}</h2>
@@ -34,11 +33,16 @@ const CartPage = () => {
                                 <div className={css.CartPage_item_total}>
                                     <p>Total: {product.price * item.quantity}</p>
                                 </div>
-
                             </div>
-                        )
+                        );
+                    } else {
+                        return (
+                            <div key={index} className={css.CartPage_item}>
+                                <p>Product not found</p>
+                            </div>
+                        );
                     }
-                })  : <p>Cart is empty</p>}
+                }) : <p>Cart is empty</p>}
             </div>
 
             <div className={css.CartPage_promoCode}>
@@ -48,19 +52,19 @@ const CartPage = () => {
 
             <div className={css.CartPage_total}>
                 <p>Total:</p>
-                {cart.lenght  > 0 ? cart.reduce((acc, item) => {
-                const product = products.find(product => product.id === item.id)
+                <p>
+                    {cart.length > 0 ? cart.reduce((acc, item) => {
+                        const product = products.find(product => product.id === item.id);
 
-                console.log("acc", acc);
-                console.log("item", item);
-                if (product) {
-                    return acc + (product.price * item.quantity);
-                }
-                }, 0) : 0}
+                        if (product) {
+                            return acc + (product.price * item.quantity);
+                        }
+                        return acc;
+                    }, 0) : 0}
+                </p>
             </div>
-
         </div>
-    )
+    );
 }
 
-export default CartPage
+export default CartPage;

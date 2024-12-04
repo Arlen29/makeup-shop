@@ -1,0 +1,38 @@
+.navbar {
+    background-color: #fcdede;
+    color: rgb(91, 21, 21);
+    padding: 20px 0; 
+    border: 20px solid #fcdede; 
+    border-radius: 30px; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: rgb(97, 13, 13);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    letter-spacing: 7px; 
+    display: inline-block;
+}
+
+.navbar ul li a.specialLink {
+    font-size: 40px; 
+}
+
+.heading {
+    color: #420808;
+    margin-bottom: 20px;
+}
